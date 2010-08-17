@@ -3,6 +3,8 @@
 # contributor: Sebastien Grosjean - ZenCocoon.com
 
 fr:
+  untitled: "Sans titre"
+
   confirmation:
     sucessfully_updated: '{{model}} a été mis(e)-à-jour avec succès.'
     sucessfully_created: '{{model}} a été créé(e) avec succès.'
