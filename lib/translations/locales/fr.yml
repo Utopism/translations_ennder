@@ -8,6 +8,7 @@ fr:
   confirmation:
     sucessfully_updated: '{{model}} a été mis(e)-à-jour avec succès.'
     sucessfully_created: '{{model}} a été créé(e) avec succès.'
+    are_you_sure: 'Êtes-vous sur(e)?'
 
   activerecord:
     models:
@@ -75,6 +76,8 @@ fr:
     pm: 'pm'
 
   datetime:
+    formats:
+      sans_sec: "%d/%B/%Y %H:%M"
     distance_in_words:
       half_a_minute: "une demi-minute"
       less_than_x_seconds:

@@ -7,4 +7,4 @@ en:
   confirmation:
     sucessfully_updated: '%1 was successfully updated.'
     sucessfully_created: '%1 was successfully created.'
-
+    are_you_sure: 'Are you sure?'
