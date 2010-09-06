@@ -6,8 +6,8 @@ fr:
   untitled: "Sans titre"
 
   confirmation:
-    sucessfully_updated: '{{model}} a été mis(e)-à-jour avec succès.'
-    sucessfully_created: '{{model}} a été créé(e) avec succès.'
+    successfully_updated: '%{model} a été mis(e)-à-jour avec succès.'
+    successfully_created: '%{model} a été créé(e) avec succès.'
     are_you_sure: 'Êtes-vous sur(e)?'
 
   activerecord:
