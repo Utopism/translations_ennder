@@ -5,6 +5,6 @@ en:
   untitled: "Untitled"
 
   confirmation:
-    sucessfully_updated: '%1 was successfully updated.'
-    sucessfully_created: '%1 was successfully created.'
+    sucessfully_updated: '%{model} was successfully updated.'
+    sucessfully_created: '%{model} was successfully created.'
     are_you_sure: 'Are you sure?'
