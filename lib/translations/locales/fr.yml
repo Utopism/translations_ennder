@@ -129,7 +129,7 @@ fr:
       format:
         unit: '€'
         precision: 2
-        format: '%n %u'
+        format: '%n&nbsp;%u'
     human:
       format:
         # These three are to override number.format and are optional
