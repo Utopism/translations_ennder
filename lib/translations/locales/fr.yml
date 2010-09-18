@@ -72,11 +72,10 @@ fr:
     formats:
       default: "%d %B %Y %H:%M"
       time: "%H:%M"
-      short: "%d %b %H:%M"
+      short: "%d %H:%M"
       long: "%A %d %B %Y %H:%M:%S %Z"
       long_ordinal: "%A %d %B %Y %H:%M:%S %Z"
       only_second: "%S"
-      sans_sec: "%d/%m/%Y %H:%M"
     am: 'am'
     pm: 'pm'
 
