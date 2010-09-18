@@ -3,25 +3,28 @@
 # contributor: Sebastien Grosjean - ZenCocoon.com
 
 fr:
+  #1) Traductions communes
   untitled: "Sans titre"
 
+  #2) Messages de confirmations
   confirmation:
     successfully_updated: '%{model} a été mis(e)-à-jour avec succès.'
     successfully_created: '%{model} a été créé(e) avec succès.'
     are_you_sure: 'Êtes-vous sur(e)?'
 
+  #3) ActiveRecord
   activerecord:
     models:
       user: "Utilisateur"
     attributes:
       session:
-        password: 'Mot de passe'
+        password: 'Mot de passe 1'
       sessions:
-        password: 'Mot de passe'
+        password: 'Mot de passe 2'
       user:
-        password: 'Mot de passe'
+        password: 'Mot de passe 3'
       users:
-        password: 'Mot de passe'
+        password: 'Mot de passe 4'
     errors:
       template:
         header:
@@ -50,6 +53,7 @@ fr:
         even: "doit être pair"
         record_invalid: "La validation a échoué : %{errors}"
 
+  #4) Formats de Date et d'Heure
   date:
     formats:
       default: "%d/%m/%Y"
@@ -72,12 +76,11 @@ fr:
       long: "%A %d %B %Y %H:%M:%S %Z"
       long_ordinal: "%A %d %B %Y %H:%M:%S %Z"
       only_second: "%S"
+      sans_sec: "%d/%m/%Y %H:%M"
     am: 'am'
     pm: 'pm'
 
   datetime:
-    formats:
-      sans_sec: "%d/%B/%Y %H:%M"
     distance_in_words:
       half_a_minute: "une demi-minute"
       less_than_x_seconds:
@@ -120,6 +123,7 @@ fr:
       minute: "Minute"
       second: "Seconde"
 
+  #5) Nombres
   number:
     format:
       precision: 3
@@ -150,6 +154,7 @@ fr:
           gb: "Go"
           tb: "To"
 
+  #7) Tableaux
   support:
     array:
       sentence_connector: 'et'
