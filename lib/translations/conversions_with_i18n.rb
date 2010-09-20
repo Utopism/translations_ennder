@@ -19,7 +19,7 @@ module ConversionsWithI18n
 #	def to_formatted_s_with_i18n(format = :default)
 	def to_s_with_i18n(p_format = :default)
 		_format = I18n.t("time.formats.#{p_format}")
-		Rails.logger.debug "DEBUG JBA : #{self.class.name} : format.#{p_format}=[#{_format}]"
+#		Rails.logger.debug "DEBUG JBA : #{self.class.name} : format.#{p_format}=[#{_format}]"
 		I18n.l( self, :format => _format ).gsub!(' ', '&nbsp;')
 	end
 end
