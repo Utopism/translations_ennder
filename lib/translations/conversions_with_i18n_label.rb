@@ -18,6 +18,7 @@ module ConversionsWithI18nLabel
 			return label_without_i18n(object_name, method, text, options)
 		end
 
+		Rails.logger.debug "DEBUG JBA : traduction =[#{_text_trans}]"
 		label_without_i18n(object_name, method, _text_trans, options)
 	end
 end
