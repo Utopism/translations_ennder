@@ -9,5 +9,5 @@ Rails.configuration.after_initialize do
 	#  Date.send :include, ConversionsWithI18n
 	#  Time.send :include, ConversionsWithI18n
 	ActiveSupport::TimeWithZone.send :include, ConversionsWithI18n
-    Rails.loggger.debug "ActiveSupport::TimeWithZone.to_s localisé"
+    Rails.logger.debug "ActiveSupport::TimeWithZone.to_s localisé"
 end
