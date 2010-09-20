@@ -14,18 +14,13 @@ module ConversionsWithI18nLabel
 		end
 
 		begin
-			_text_trans = I18n.t("activerecord.attributes.#{object_name.to_s.tableize.singularize}.#{method}", :raise => true)
+			_label_trans = I18n.t("activerecord.attributes.#{object_name.to_s.tableize.singularize}.#{method}", :raise => true)
 		rescue I18n::MissingTranslationData
 #			Rails.logger.debug "DEBUG JBA : traduction PAS trouvée(activerecord.attributes.#{object_name.to_s.tableize.singularize}.#{method})"
-			return label_without_i18n(object_name, method, self.bold_and_colon(method), options)
+			_label_trans = method
 		end
 
-#		Rails.logger.debug "DEBUG JBA : traduction =[#{_text_trans}]"
-		label_without_i18n(object_name, method, self.bold_and_colon(_text_trans), options)
-	end
-
-private
-	def bold_and_colon(p_string)
-		"<b>#{p_string}</b> :"
+#		Rails.logger.debug "DEBUG JBA : traduction =[#{_label_trans}]"
+		label_without_i18n(object_name, method, "<b>#{_label_trans}</b> :", options)
 	end
 end
