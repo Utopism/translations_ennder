@@ -26,6 +26,6 @@ module ConversionsWithI18nLabel
 
 private
 	def bold_and_colon(p_string)
-		"<b>#{_text_trans}</b> :"
+		"<b>#{p_string}</b> :"
 	end
 end
