@@ -7,7 +7,9 @@ en:
   Show: 'Show'
   Edit: 'Edit'
   Delete: 'Delete'
+
   Update: 'Update'
+  Cancel: 'Cancel'
 
   confirmation:
     successfully_updated: '%{model} was successfully updated.'
