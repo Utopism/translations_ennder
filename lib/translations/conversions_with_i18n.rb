@@ -32,15 +32,16 @@ module ConversionsWithI18n
 
 	def label_with_i18n(object_name, method, text = nil, options = {})
 		if !text.blank?
-			return label_with_i18n(object_name, method, text, options)
+			return label_without_i18n(object_name, method, text, options)
 		end
 
 		begin
 			_text_trans = I18n.t("activerecod.attributes.#{object_name}.#{method}", :raise => true)
 		rescue I18n::MissingTranslationData
-			return label_with_i18n(object_name, method, text, options)
+			Rails.logger.debug "DEBUG JBA : traduction PAS trouvée(#{object_name}/#{method}"
+			return label_without_i18n(object_name, method, text, options)
 		end
 
-		label_with_i18n(object_name, method, _text_trans, options)
+		label_without_i18n(object_name, method, _text_trans, options)
 	end
 end
