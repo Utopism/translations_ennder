@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+require 'conversions_with_i18n'
+
 Rails.configuration.after_initialize do
 	I18n.load_path.unshift File.expand_path(File.join(File.dirname(__FILE__), 'locales', 'en.yml'))
 	I18n.load_path.unshift File.expand_path(File.join(File.dirname(__FILE__), 'locales', 'fr.yml'))
