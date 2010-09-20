@@ -13,6 +13,8 @@ module ConversionsWithI18n
 			alias_method_chain :to_s, :i18n
 
 #			alias_method :to_s, :to_formatted_s
+
+			alias_method_chain :label, :i18n
 		end
 	end
 
@@ -27,5 +29,18 @@ module ConversionsWithI18n
 #		Rails.logger.debug "DEBUG JBA : #{self.class.name} : format.#{p_format}=[#{_format}]"
 		I18n.l( self, :format => _format )
 	end
-end
 
+	def label_with_i18n(object_name, method, text = nil, options = {})
+		if !text.blank?
+			return label_with_i18n(object_name, method, text, options)
+		end
+
+		begin
+			_text_trans = I18n.t("activerecod.attributes.#{object_name}.#{method}", :raise => true)
+		rescue I18n::MissingTranslationData
+			return label_with_i18n(object_name, method, text, options)
+		end
+
+		label_with_i18n(object_name, method, _text_trans, options)
+	end
+end
