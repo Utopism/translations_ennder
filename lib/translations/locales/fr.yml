@@ -65,7 +65,7 @@ fr:
     formats:
       default: "%d/%m/%Y"
       short: "%e %b"
-      long: "%e %B %Y"
+      long: "%e %b %Y"
       long_ordinal: "%e %B %Y"
       only_day: "%e"
 
