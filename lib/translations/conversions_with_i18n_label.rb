@@ -16,7 +16,7 @@ module ConversionsWithI18nLabel
 		begin
 			_text_trans = I18n.t("activerecod.attributes.#{self.object}.#{method}", :raise => true)
 		rescue I18n::MissingTranslationData
-			Rails.logger.debug "DEBUG JBA : traduction PAS trouvée(#{object_name}/#{method}"
+			Rails.logger.debug "DEBUG JBA : traduction PAS trouvée(#{self.object}.#{method})"
 			return label_without_i18n(method, text, options)
 		end
 
