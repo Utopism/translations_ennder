@@ -11,6 +11,10 @@ en:
   Update: 'Update'
   Cancel: 'Cancel'
 
+  time:
+    formats:
+      short_nbsp: "%Y/%m/%d&nbsp;%H:%M"
+
   confirmation:
     successfully_updated: '%{model} was successfully updated.'
     successfully_created: '%{model} was successfully created.'

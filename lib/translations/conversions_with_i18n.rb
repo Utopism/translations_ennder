@@ -25,12 +25,7 @@ module ConversionsWithI18n
 		end
 
 #		Rails.logger.debug "DEBUG JBA : #{self.class.name} : format.#{p_format}=[#{_format}]"
-		_trans = I18n.l( self, :format => _format )
-		if ! p_format['_nbsp'].nil?
-			_trans.gsub!(' ', '&nbsp;')
-		end
-
-		_trans
+		I18n.l( self, :format => _format )
 	end
 end
 
