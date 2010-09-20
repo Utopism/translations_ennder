@@ -6,7 +6,7 @@ module ConversionsWithI18nLabel
 		end
 	end
 
-	def label_with_i18n(object_name, method, text = nil, options = {})
+	def label_with_i18n_bold_and_colon(object_name, method, text = nil, bold_and_colon=false, options = {})
 #		Rails.logger.debug "DEBUG JBA : label_with_i18n(#{object_name}, #{method}, #{text}, #{options})"
 
 		if !text.blank?
@@ -21,6 +21,14 @@ module ConversionsWithI18nLabel
 		end
 
 #		Rails.logger.debug "DEBUG JBA : traduction =[#{_label_trans}]"
-		label_without_i18n(object_name, method, "<b>#{_label_trans}</b> :", options)
+		label_without_i18n(object_name, method, (bold_and_colon ? "<b>#{_label_trans}</b> :" : _label_trans), options)
+	end
+
+	def label_with_i18n(object_name, method, text, options)
+		label_with_i18n_bold_and_colon(object_name, method, text, true, options)
+	end
+
+	def label_bold_and_colon(object_name, method, text = nil, options = {})
+		label_with_i18n_bold_and_colon(object_name, method, text, true, options)
 	end
 end
