@@ -7,6 +7,8 @@ module ConversionsWithI18nLabel
 	end
 
 	def label_with_i18n(object_name, method, text = nil, options = {})
+		Rails.logger.debug "DEBUG JBA : label_with_i18n(#{object_name}, #{method}, #{text}, #{options})"
+
 		if !text.blank?
 			return label_without_i18n(object_name, method, text, options)
 		end
