@@ -1,11 +1,12 @@
 # Pour que label prenne en compte les formats localisés
 module ConversionsWithI18nLabel
+	#Constructeur de module
 	def self.included(base)
 		base.instance_eval do
 			alias_method_chain :label, :i18n
 		end
 
-		def label_with_i18n_bold_and_colon(bold_and_colon, object_name, method, text = nil, options = {})
+		def base.label_with_i18n_bold_and_colon(bold_and_colon, object_name, method, text = nil, options = {})
 #			Rails.logger.debug "DEBUG JBA : label_with_i18n(#{object_name}, #{method}, #{text}, #{options})"
 
 			if !text.blank?
@@ -23,7 +24,7 @@ module ConversionsWithI18nLabel
 			label_without_i18n(object_name, method, (bold_and_colon ? "<b>#{_label_trans}</b> :" : _label_trans), options)
 		end
 
-		def label_bold_and_colon(object_name, method, text = nil, options = {})
+		def base.label_bold_and_colon(object_name, method, text = nil, options = {})
 			label_with_i18n_bold_and_colon(true, object_name, method, text, true, options)
 		end
 	end
