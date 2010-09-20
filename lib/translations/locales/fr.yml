@@ -5,7 +5,13 @@
 fr:
   #1) Traductions communes
   untitled: "Sans titre"
-  update: 'Met-à-jour'
+
+  Show: 'Voir'
+  Edit: 'Éditer'
+  Delete: 'Supprimer'
+
+  Update: 'Met-à-jour'
+  Cancel: 'Cancel'
 
   #2) Messages de confirmations
   confirmation:

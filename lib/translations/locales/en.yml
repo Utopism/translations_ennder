@@ -3,9 +3,13 @@
 
 en:
   untitled: "Untitled"
-  update: 'Update'
+
+  Show: 'Show'
+  Edit: 'Edit'
+  Delete: 'Delete'
+  Update: 'Update'
 
   confirmation:
-    sucessfully_updated: '%{model} was successfully updated.'
-    sucessfully_created: '%{model} was successfully created.'
+    successfully_updated: '%{model} was successfully updated.'
+    successfully_created: '%{model} was successfully created.'
     are_you_sure: 'Are you sure?'
