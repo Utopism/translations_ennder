@@ -5,6 +5,7 @@
 fr:
   #1) Traductions communes
   untitled: "Sans titre"
+  update: 'Met-à-jour'
 
   #2) Messages de confirmations
   confirmation:

@@ -3,6 +3,7 @@
 
 en:
   untitled: "Untitled"
+  update: 'Update'
 
   confirmation:
     sucessfully_updated: '%{model} was successfully updated.'
