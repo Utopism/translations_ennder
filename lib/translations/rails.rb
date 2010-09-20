@@ -9,5 +9,5 @@ Rails.configuration.after_initialize do
 	#  Date.send :include, ConversionsWithI18nToS
 	#  Time.send :include, ConversionsWithI18nToS
 	ActiveSupport::TimeWithZone.send :include, ConversionsWithI18nToS
-	ActionView::Helpers::FormBuilder :include, ConversionsWithI18nLabel
+	ActionView::Helpers::FormBuilder.send :include, ConversionsWithI18nLabel
 end
