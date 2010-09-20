@@ -19,7 +19,7 @@ module ConversionsWithI18n
 #	def to_formatted_s_with_i18n(format = :default)
 	def to_s_with_i18n(format = :default)
 		_format = I18n.t("date.formats.#{format}")
-		puts "DEBUG JBA : #{self.class.name} : format=[#{_format}]"
+#		puts "DEBUG JBA : #{self.class.name} : format=[#{_format}]"
 		I18n.l( self, :format => I18n.t("time.formats.#{format}") ).gsub!(' ', '&nbsp;')
 	end
 end
