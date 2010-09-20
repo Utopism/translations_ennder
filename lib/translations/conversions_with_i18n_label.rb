@@ -14,9 +14,9 @@ module ConversionsWithI18nLabel
 		end
 
 		begin
-			_text_trans = I18n.t("activerecod.attributes.#{self.object}.#{method}", :raise => true)
+			_text_trans = I18n.t("activerecod.attributes.#{self.object.class.name.tableize.singularize}.#{method}", :raise => true)
 		rescue I18n::MissingTranslationData
-			Rails.logger.debug "DEBUG JBA : traduction PAS trouvée(#{self.object}.#{method})"
+			Rails.logger.debug "DEBUG JBA : traduction PAS trouvée(activerecod.attributes.#{self.object.class.name.tableize.singularize}.#{method})"
 			return label_without_i18n(method, text, options)
 		end
 
