@@ -3,7 +3,7 @@ module ConversionsWithI18nLabel
 	#Constructeur de module
 	def self.included(base)
 		base.instance_eval do
-			puts "#{base.class.name}.instance_eval"
+			puts "#{base.name}.instance_eval"
 			alias_method_chain :label, :i18n
 		end
 
