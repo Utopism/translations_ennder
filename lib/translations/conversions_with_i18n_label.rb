@@ -10,7 +10,7 @@ module ConversionsWithI18nLabel
 	end
 
 	def label_with_i18n_bold_and_colon(bold_and_colon, object_name, method, text = nil, options = {})
-		Rails.logger.debug "DEBUG JBA : label_with_i18n_bold_and_colon(#{object_name}, #{method}, #{text}, #{options})"
+		Rails.logger.debug "DEBUG JBA : #{self.class.name}.label_with_i18n_bold_and_colon(#{object_name}, #{method}, #{text}, #{options})"
 
 		if !text.blank?
 			return label_without_i18n(object_name, method, text, options)
@@ -28,14 +28,14 @@ module ConversionsWithI18nLabel
 	end
 
 	def label_bold_and_colon(object_name, method, text = nil, options = {})
-		Rails.logger.debug "DEBUG JBA : label_bold_and_colon(#{object_name}, #{method}, #{text}, #{options})"
+		Rails.logger.debug "DEBUG JBA : #{self.class.name}.label_bold_and_colon(#{object_name}, #{method}, #{text}, #{options})"
 		label_with_i18n_bold_and_colon(true, object_name, method, text, true, options)
 	end
 
 	def label_with_i18n(object_name, method, text = nil, options = {})
-		Rails.logger.debug "DEBUG JBA : label_with_i18n(#{object_name}, #{method}, #{text}, #{options})"
+		Rails.logger.debug "DEBUG JBA : #{self.class.name}.label_with_i18n(#{object_name}, #{method}, #{text}, #{options})"
 
-		ActionView::Base.methods.sort.each do | _method |
+		self.class.methods.sort.each do | _method |
 			Rails.logger.debug "DEBUG JBA : #{_method}"
 		end
 
