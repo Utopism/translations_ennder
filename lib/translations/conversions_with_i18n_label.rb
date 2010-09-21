@@ -3,7 +3,7 @@ module ConversionsWithI18nLabel
 	#Constructeur de module
 	def self.included(base)
 		base.instance_eval do
-			puts "#{base.name}.instance_eval"
+#			puts "#{base.name}.instance_eval"
 			alias_method_chain :label, :i18n
 		end
 
@@ -34,10 +34,11 @@ module ConversionsWithI18nLabel
 
 	def label_with_i18n(object_name, method, text = nil, options = {})
 		Rails.logger.debug "DEBUG JBA : label_with_i18n(#{object_name}, #{method}, #{text}, #{options})"
-		label_with_i18n_bold_and_colon(false, object_name, method, text, options)
 
 		ActionView::Base.methods.sort.each do | _method |
 			Rails.logger.debug "DEBUG JBA : #{_method}"
 		end
+
+		label_with_i18n_bold_and_colon(false, object_name, method, text, options)
 	end
 end
