@@ -34,5 +34,9 @@ module ConversionsWithI18nLabel
 	def label_with_i18n(object_name, method, text = nil, options = {})
 		Rails.logger.debug "DEBUG JBA : label_with_i18n(#{object_name}, #{method}, #{text}, #{options})"
 		label_with_i18n_bold_and_colon(false, object_name, method, text, options)
+
+		ActionView::Base.methods.sort.each do | _method |
+			Rails.logger.debug "DEBUG JBA : #{_method}"
+		end
 	end
 end
