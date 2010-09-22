@@ -13,6 +13,7 @@ module ConversionsWithI18nLabel
 		Rails.logger.debug "DEBUG JBA : #{self.class.name}.label_with_i18n(#{object_name}, #{method}, #{text}, #{options})"
 
 		if !text.blank?
+			#PAS de changement du comportement si un libellé a été fournir
 			return label_without_i18n(object_name, method, text, options)
 		end
 
@@ -20,7 +21,8 @@ module ConversionsWithI18nLabel
 			_label_trans = I18n.t("activerecord.attributes.#{object_name.to_s.tableize.singularize}.#{method}", :raise => true)
 		rescue I18n::MissingTranslationData
 #			Rails.logger.debug "DEBUG JBA : traduction PAS trouvée(activerecord.attributes.#{object_name.to_s.tableize.singularize}.#{method})"
-			_label_trans = method
+			#PAS de changement du comportement si aucune traduction trouvée
+			_label_trans = text
 		end
 
 #		Rails.logger.debug "DEBUG JBA : traduction =[#{_label_trans}]"
