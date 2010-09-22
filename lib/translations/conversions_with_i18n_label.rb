@@ -10,7 +10,7 @@ module ConversionsWithI18nLabel
 	end
 
 	def label_with_i18n(object_name, method, text = nil, options = {})
-		Rails.logger.debug "DEBUG JBA : #{self.class.name}.label_with_i18n(#{object_name}, #{method}, #{text}, #{options})"
+#		Rails.logger.debug "DEBUG JBA : #{self.class.name}.label_with_i18n(#{object_name}, #{method}, #{text}, #{options})"
 
 		if !text.blank?
 			#PAS de changement du comportement si un libellé a été fournir
