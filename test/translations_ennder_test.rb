@@ -1,8 +1,8 @@
 require 'test_helper'
 
 class TranslationsEnnderTest < ActiveSupport::TestCase
-  # Replace this with your real tests.
-  test "the truth" do
-    assert true
-  end
+	test "the truth" do
+		#TODO test apport traduction
+		assert true
+	end
 end
