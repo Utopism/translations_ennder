@@ -1,0 +1,8 @@
+#Kde
+.directory
+
+#Bones
+pkg/translations_ennder-*/**/*
+pkg/translations_ennder-*/*
+
+pkg/translations_ennder-*.tgz
