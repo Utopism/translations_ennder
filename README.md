@@ -13,27 +13,26 @@ permet la traduction automatique des labels pour Rails 2 comme avec Rails 3
 Examples
 --------
 
-    FIXME (code sample of usage)
+    t('Update')
 
 Requirements
 ------------
 
-* FIXME (list of requirements)
+None
 
 Install
 -------
 
-* FIXME (sudo gem install, anything else)
+Works as-is
 
 Author
 ------
 
-Original author: FIXME (author's name)
+Original author: Ennder
 
 Contributors:
 
-* FIXME (contributor 1?)
-* FIXME (contributor 2?)
+None
 
 License
 -------
