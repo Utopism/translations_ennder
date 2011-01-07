@@ -10,8 +10,8 @@ task 'gem:release' => 'test:run'
 
 Bones {
   name  'translations_ennder'
-  authors  'FIXME (who is writing this software)'
-  email    'FIXME (your e-mail)'
-  url      'FIXME (project homepage)'
+  authors  'Ennder'
+  email    'mel@ennder.fr'
+  url      'http://www.ennder.fr'
 }
 
