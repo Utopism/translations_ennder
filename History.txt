@@ -12,3 +12,6 @@
 
 == 1.0.0 / 2011-01-10
 * Ajout méthode set_locale au helper de l'appli
+
+== 1.0.1 / 2011-01-10
+* set_locale : Helper vers extension ApplicationController
