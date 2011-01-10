@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
-Rails.configuration.after_initialize do
+# Méthode possible ici ?
+def init_translations_ennder
 	I18n.load_path.unshift File.expand_path(File.join(File.dirname(__FILE__), 'locales', 'en.yml'))
 	I18n.load_path.unshift File.expand_path(File.join(File.dirname(__FILE__), 'locales', 'fr.yml'))
 
@@ -10,4 +11,14 @@ Rails.configuration.after_initialize do
 	#  Time.send :include, ConversionsWithI18nToS
 	ActiveSupport::TimeWithZone.send :include, ConversionsWithI18nToS
 	ActionView::Helpers::FormHelper.send :include, ConversionsWithI18nLabel
+end
+
+
+if Rails::VERSION::MAJOR < 3 then
+	Rails::Railtie::Configuration.after_initialize do
+#	Rails.configuration.after_initialize do
+		init_translations_ennder
+	end
+else
+	init_translations_ennder
 end
