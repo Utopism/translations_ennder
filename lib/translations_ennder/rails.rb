@@ -15,10 +15,11 @@ end
 
 
 if Rails::VERSION::MAJOR < 3 then
-	Rails::Railtie::Configuration.after_initialize do
-#	Rails.configuration.after_initialize do
+	Rails.configuration.after_initialize do
+		puts "Railx V2.x.y, init_translations_ennder() dans after_initialize"
 		init_translations_ennder
 	end
 else
+	puts "Railx V3.x.y, init_translations_ennder()"
 	init_translations_ennder
 end
