@@ -2,3 +2,6 @@
 
 * 1 major enhancement
   * migration de Plugin vers Gem
+
+== 0.9.5 / 2011-01-10
+* Mise en compatibilité avec Rails 3
