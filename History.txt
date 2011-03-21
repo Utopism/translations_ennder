@@ -28,6 +28,14 @@
 == 1.0.5 / 2011-03-21
 * correction régression introduite par V1.0.3
 
-== 1.0.5 / 2011-03-21
+== 1.0.6 / 2011-03-21
 * correction régression introduite par V1.0.4
 eh oui désolé je n'ai pas de procédure de test encore...
+
+== 1.0.7 / 2011-03-21
+* remplacement de Rails.logger par RAILS_DEFAULT_LOGGER
+Rails.logger pas initalisé
+
+== 1.0.8 / 2011-03-21
+* Utilisation de Rails.configuration.logger si initialisé
+sinon puts
