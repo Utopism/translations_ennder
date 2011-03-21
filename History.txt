@@ -27,3 +27,7 @@
 
 == 1.0.5 / 2011-03-21
 * correction régression introduite par V1.0.3
+
+== 1.0.5 / 2011-03-21
+* correction régression introduite par V1.0.4
+eh oui désolé je n'ai pas de procédure de test encore...
