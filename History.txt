@@ -21,3 +21,6 @@
 
 == 1.0.3 / 2011-03-21
 * set_locale : contrôle de sécurité
+
+== 1.0.4 / 2011-03-21
+* trace au démarrage de la version du gem

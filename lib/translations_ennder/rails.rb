@@ -16,11 +16,11 @@ end
 
 if Rails::VERSION::MAJOR < 3 then
 	Rails.configuration.after_initialize do
-		puts "Railx V2.x.y, init_translations_ennder() dans after_initialize"
+		Rails.debugger.info "gem translations_ennder V#{TranslationsEnnder.version}, Railx V2.x.y, init_translations_ennder() dans after_initialize"
 		init_translations_ennder
 	end
 else
-	puts "Railx V3.x.y, init_translations_ennder()"
+	Rails.debugger.info "gem translations_ennder V#{TranslationsEnnder.version}, Railx V3.x.y, init_translations_ennder()"
 	init_translations_ennder
 end
 
