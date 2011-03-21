@@ -28,25 +28,38 @@ end
 module ActionController
 	class Base
 		# Instance methods here
+
 		def set_locale
-			if (params[:locale] and params[:locale].match /^(en|fr)$/)
-				I18n.locale = params[:locale]
-			elsif session[:locale].nil?
-				_http_lang = request.env['HTTP_ACCEPT_LANGUAGE'].scan(/^[a-z]{2}/).first
-				if _http_lang.match /^(en|fr)$/
-					I18n.locale = _http_lang
+			_param_locale = params[:locale]
+			if (!_param_locale.blank?) and _param_locale.match /^(en|fr)$/)
+				#Vient du paramètre de requête
+				I18n.locale = _param_locale
+			elsif session[:locale].blank? and (! request.env['HTTP_ACCEPT_LANGUAGE'].blank?)
+				#Vient des entêtes de la requête
+				_http_lang_tab = request.env['HTTP_ACCEPT_LANGUAGE'].scan(/^[a-z]{2}/)
+				if (! _http_lang_tab.empty?) and (! _http_lang.first.blank? )
+					if _http_lang.first.match /^(en|fr)$/
+						I18n.locale = _http_lang.first
+					else
+						set_locale_session_or_fr
+					end
 				else
-					I18n.locale = :fr
+					set_locale_session_or_fr
 				end
 			else
-				I18n.locale = session[:locale] || :fr
+				set_locale_session_or_fr
 			end
 
-	#		logger.debug "locale=[#{session[:locale]}]"
+#			logger.debug "locale=[#{session[:locale]}]"
 
 			if session[:locale] != I18n.locale
 				session[:locale] = I18n.locale
 			end
+		end
+
+		def set_locale_session_or_fr
+			#Vient de la session, ou pas fourni
+			I18n.locale = session[:locale] || :fr
 		end
 	end
 end
