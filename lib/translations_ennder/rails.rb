@@ -31,7 +31,7 @@ module ActionController
 
 		def set_locale
 			_param_locale = params[:locale]
-			if (!_param_locale.blank?) and _param_locale.match /^(en|fr)$/)
+			if (!_param_locale.blank?) and _param_locale.match /^(en|fr)$/
 				#Vient du paramètre de requête
 				I18n.locale = _param_locale
 			elsif session[:locale].blank? and (! request.env['HTTP_ACCEPT_LANGUAGE'].blank?)

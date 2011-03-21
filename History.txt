@@ -24,3 +24,6 @@
 
 == 1.0.4 / 2011-03-21
 * trace au démarrage de la version du gem
+
+== 1.0.5 / 2011-03-21
+* correction régression introduite par V1.0.3
