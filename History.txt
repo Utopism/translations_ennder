@@ -39,3 +39,7 @@ Rails.logger pas initalisé
 == 1.0.8 / 2011-03-21
 * Utilisation de Rails.configuration.logger si initialisé
 sinon puts
+
+== 1.0.9 / 2011-03-21
+* trace init° gem dans les logs
+Pour Rails 2 et 3
