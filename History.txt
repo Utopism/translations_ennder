@@ -50,3 +50,8 @@ RAILS_ROOT au lien de Rails.root, Rails n'est pas encore initalisé
 
 == 1.1.1 / 2011-03-22
 * correction anomalie dans set_locale
+
+== 1.1.2 / 2011-03-22
+* trace changement de locale dans la session
+format date-heure short: JJ/MM/AASS HHhMM
+Enfin testé

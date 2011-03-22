@@ -81,7 +81,7 @@ fr:
     formats:
       default: "%d %b %Y %H:%M"
       time: "%H:%M"
-      short: "%d/%m/%Y %H:%M"
+      short: "%d/%m/%Y %Hh%M"
       short_nbsp: "%Y/%m/%d&nbsp;%Hh%M"
       long: "%A %d %b %Y %H:%M:%S %Z"
       long_ordinal: "%A %d %B %Y %H:%M:%S %Z"

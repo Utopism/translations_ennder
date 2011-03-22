@@ -73,6 +73,7 @@ module ActionController
 #			logger.debug "locale=[#{session[:locale]}]"
 
 			if session[:locale] != I18n.locale
+				logger.debug "locale [#{session[:locale]}]=>[#{I18n.locale}]"
 				session[:locale] = I18n.locale
 			end
 		end
