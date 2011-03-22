@@ -31,7 +31,7 @@ else
 	_info = "gem translations_ennder V#{TranslationsEnnder.version}, Railx V3.x.y, init_translations_ennder()"
 
 	if Rails.logger.nil?
-		_logger = Logger.new(Rails.root + "log/#{Rails.env}.log")
+		_logger = Logger.new(RAILS_ROOT + "log/#{Rails.env}.log")
 	else
 		_logger = Rails.logger
 	end

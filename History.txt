@@ -43,3 +43,7 @@ sinon puts
 == 1.0.9 / 2011-03-21
 * trace init° gem dans les logs
 Pour Rails 2 et 3
+
+== 1.1.0 / 2011-03-22
+* préparation des test
+RAILS_ROOT au lien de Rails.root, Rails n'est pas encore initalisé
