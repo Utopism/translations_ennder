@@ -57,9 +57,9 @@ module ActionController
 			elsif session[:locale].blank? and (! request.env['HTTP_ACCEPT_LANGUAGE'].blank?)
 				#Vient des entêtes de la requête
 				_http_lang_tab = request.env['HTTP_ACCEPT_LANGUAGE'].scan(/^[a-z]{2}/)
-				if (! _http_lang_tab.empty?) and (! _http_lang.first.blank? )
-					if _http_lang.first.match /^(en|fr)$/
-						I18n.locale = _http_lang.first
+				if (! _http_lang_tab.empty?) and (! _http_lang_tab.first.blank? )
+					if _http_lang_tab.first.match /^(en|fr)$/
+						I18n.locale = _http_lang_tab.first
 					else
 						set_locale_session_or_fr
 					end
