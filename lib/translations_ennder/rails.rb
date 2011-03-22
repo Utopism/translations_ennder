@@ -15,6 +15,8 @@ end
 
 
 if Rails::VERSION::MAJOR < 3 then
+	#Rails 2
+
 	Rails.configuration.after_initialize do
 		_info = "gem translations_ennder V#{TranslationsEnnder.version}, Railx V2.x.y, init_translations_ennder() dans after_initialize"
 
@@ -28,10 +30,12 @@ if Rails::VERSION::MAJOR < 3 then
 		init_translations_ennder
 	end
 else
+	#Rails 3
+
 	_info = "gem translations_ennder V#{TranslationsEnnder.version}, Railx V3.x.y, init_translations_ennder()"
 
 	if Rails.logger.nil?
-		_logger = Logger.new(RAILS_ROOT + "log/#{Rails.env}.log")
+		_logger = Logger.new(::Rails.root.to_s + "log/#{Rails.env}.log")
 	else
 		_logger = Rails.logger
 	end
