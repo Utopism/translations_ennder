@@ -6,14 +6,14 @@ def init_translations_ennder
 	I18n.load_path.unshift File.expand_path(File.join(File.dirname(__FILE__), 'locales', 'en.yml'))
 	I18n.load_path.unshift File.expand_path(File.join(File.dirname(__FILE__), 'locales', 'fr.yml'))
 
-	if Rails::VERSION::MAJOR < 3
-		#JBA 2010-09-19, sera caduque avec Rails 3
+#	if Rails::VERSION::MAJOR < 3
+		#JBA 2011-03-29, sera caduque avec Rails 3 ?
 		#pour que to_s prenne en compte les formats localisés
 		#  Date.send :include, ConversionsWithI18nToS
 		#  Time.send :include, ConversionsWithI18nToS
 		ActiveSupport::TimeWithZone.send :include, ConversionsWithI18nToS
 		ActionView::Helpers::FormHelper.send :include, ConversionsWithI18nLabel
-	end
+#	end
 end
 
 
@@ -21,8 +21,9 @@ if Rails::VERSION::MAJOR < 3 then
 	#Rails 2
 
 	Rails.configuration.after_initialize do
-		_info = "gem translations_ennder V#{TranslationsEnnder.version}, Railx V2.x.y, init_translations_ennder() dans after_initialize"
+		_info = "GEM translations_ennder V#{TranslationsEnnder.version}, translations_ennder/rails.rb, Railx V2.x.y"
 
+		puts "Rails.configuration.after_initialize, RAILS_ROOT=[#{RAILS_ROOT}], RAILS_ENV=#{RAILS_ENV}"
 		if RAILS_DEFAULT_LOGGER.nil?
 			_logger = Logger.new( File.join(RAILS_ROOT, "log", "#{RAILS_ENV}.log") )
 		else
@@ -35,14 +36,8 @@ if Rails::VERSION::MAJOR < 3 then
 else
 	#Rails 3
 
-	_info = "gem translations_ennder V#{TranslationsEnnder.version}, Railx V3.x.y, init_translations_ennder()"
-
-	if Rails.logger.nil?
-		_logger = Logger.new(::Rails.root.to_s + "log/#{Rails.env}.log")
-	else
-		_logger = Rails.logger
-	end
-	_logger.info _info
+	# Rails n'est pas encore initalisé dans ce cas
+	puts "GEM translations_ennder V#{TranslationsEnnder.version}, translations_ennder/rails.rb, Railx V3.x.y"
 
 	init_translations_ennder
 end
@@ -73,10 +68,10 @@ module ActionController
 				set_locale_session_or_fr
 			end
 
-#			logger.debug "locale=[#{session[:locale]}]"
+#			logger.debug "GEM translations_ennder, locale=[#{session[:locale]}]"
 
 			if session[:locale] != I18n.locale
-				logger.debug "locale [#{session[:locale]}]=>[#{I18n.locale}]"
+				logger.debug "GEM translations_ennder, set_locale [#{session[:locale]}]=>[#{I18n.locale}]"
 				session[:locale] = I18n.locale
 			end
 		end
