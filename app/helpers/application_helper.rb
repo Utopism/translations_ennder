@@ -2,7 +2,7 @@
 module ApplicationHelper
 	#Label de la forme : "<b><nom_colonne></b>: "
 	def label_bold_and_colon(object_name, method, text = nil, options = {})
-		Rails.logger.debug "DEBUG JBA : #{self.class.name}.label_bold_and_colon(#{object_name}, #{method}, #{text}, #{options})"
+#		Rails.logger.debug "DEBUG JBA : #{self.class.name}.label_bold_and_colon(#{object_name}, #{method}, #{text}, #{options})"
 		if text.blank?
 			label(true, object_name, method, method.humanize, true, options)
 		else
