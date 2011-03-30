@@ -55,3 +55,6 @@ RAILS_ROOT au lien de Rails.root, Rails n'est pas encore initalisé
 * trace changement de locale dans la session
 format date-heure short: JJ/MM/AASS HHhMM
 Enfin testé
+
+== 1.1.3 / 2011-03-29
+* monkey patching localisations réactivé pour Rails 3
