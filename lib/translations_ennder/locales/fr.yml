@@ -23,17 +23,6 @@ fr:
 
   #3) ActiveRecord
   activerecord:
-    models:
-      user: "Utilisateur"
-    attributes:
-      session:
-        password: 'Mot de passe 1'
-      sessions:
-        password: 'Mot de passe 2'
-      user:
-        password: 'Mot de passe 3'
-      users:
-        password: 'Mot de passe 4'
     errors:
       template:
         header:

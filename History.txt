@@ -58,3 +58,11 @@ Enfin testé
 
 == 1.1.3 / 2011-03-29
 * monkey patching localisations réactivé pour Rails 3
+
+== 1.1.4 / 2011-06-16
+* traductions supprimées :
+  activerecord.models.user
+  activerecord.models.attributes.session.password
+  activerecord.models.attributes.sessions.password
+  activerecord.models.attributes.user.password
+  activerecord.models.attributes.users.password
