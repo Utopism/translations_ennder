@@ -66,3 +66,6 @@ Enfin testé
   activerecord.models.attributes.sessions.password
   activerecord.models.attributes.user.password
   activerecord.models.attributes.users.password
+
+== 1.1.5 / 2011-06-26
+* set_locale, change la locale que si session existe

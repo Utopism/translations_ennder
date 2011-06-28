@@ -48,6 +48,11 @@ module ActionController
 		# Instance methods here
 
 		def set_locale
+			#Il faut une session
+			if session[:session_id].blank?
+				return
+			end
+
 			_param_locale = params[:locale]
 			if (!_param_locale.blank?) and _param_locale.match /^(en|fr)$/
 				#Vient du paramètre de requête
