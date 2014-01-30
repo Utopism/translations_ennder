@@ -2,18 +2,22 @@
 
 # Méthode possible ici ?
 def init_translations_ennder
-	#Ajout des fichiers de traductions communs
-	I18n.load_path.unshift File.expand_path(File.join(File.dirname(__FILE__), 'locales', 'en.yml'))
-	I18n.load_path.unshift File.expand_path(File.join(File.dirname(__FILE__), 'locales', 'fr.yml'))
-
-#	if Rails::VERSION::MAJOR < 3
+	if Rails::VERSION::MAJOR < 3
 		#JBA 2011-03-29, sera caduque avec Rails 3 ?
 		#pour que to_s prenne en compte les formats localisés
 		#  Date.send :include, ConversionsWithI18nToS
 		#  Time.send :include, ConversionsWithI18nToS
 		ActiveSupport::TimeWithZone.send :include, ConversionsWithI18nToS
 		ActionView::Helpers::FormHelper.send :include, ConversionsWithI18nLabel
-#	end
+
+		#Ajout des fichiers de traductions communs
+		I18n.load_path.unshift File.expand_path(File.join(File.dirname(__FILE__), 'locales_rails2', 'en.yml'))
+		I18n.load_path.unshift File.expand_path(File.join(File.dirname(__FILE__), 'locales_rails2', 'fr.yml'))
+	else
+		#Ajout des fichiers de traductions communs
+		I18n.load_path.unshift File.expand_path(File.join(File.dirname(__FILE__), 'locales', 'en.yml'))
+		I18n.load_path.unshift File.expand_path(File.join(File.dirname(__FILE__), 'locales', 'fr.yml'))
+	end
 end
 
 

@@ -69,3 +69,6 @@ Enfin testé
 
 == 1.1.5 / 2011-06-26
 * set_locale, change la locale que si session existe
+
+== 1.1.6 / 2012-12-26
+* portage à rails 3, format de order dans les fichiers de locales
