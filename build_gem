@@ -5,3 +5,8 @@ mv translations_ennder*.gem pkg/
 
 echo -e "\nfiles in pkg/ :"
 ls -ailh pkg/
+
+echo "before publishing it do :"
+echo "cd ../building gem in pkg/"
+echo "rake"
+
