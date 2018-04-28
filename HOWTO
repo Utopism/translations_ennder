@@ -1,0 +1,11 @@
+- publish the gem :
+	gem build translations_ennder.gemspec
+
+- test :
+	C.f. rails/1_gems/test_gems_ennder_rails3
+	rake test
+
+- publication :
+	curl -u qrush https://rubygems.org/api/v1/api_key.yaml >~/.gem/credentials; chmod 0600 ~/.gem/credentials
+
+	gem push translations_ennder-1.3.12.gem
