@@ -1,9 +1,9 @@
-./buid_gem
+./build_gem
 
 nb_gems=$(ls -1q pkg/translations_ennder-*.gem | wc -l)
 
 if [ $nb_gems -ne 1 ]; then
-	echo "[$nb_gems] gem(s) to publish, NOT one"
+	echo -e "\e[91m[$nb_gems] gem(s) to publish, NOT one\e[0m"
 
 	echo -e "\nfiles in pkg/ :"
 	ls -ailh pkg/
@@ -12,5 +12,5 @@ if [ $nb_gems -ne 1 ]; then
 fi
 gem_path=$(ls -1q pkg/translations_ennder-*.gem)
 
-echo "-->publishing gem ${gem_path} to Rubygems"
+echo -e "\n-->publishing gem ${gem_path} to Rubygems"
 gem push $gem_path
