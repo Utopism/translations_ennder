@@ -25,7 +25,7 @@ if Rails::VERSION::MAJOR < 3 then
 	#Rails 2
 
 	Rails.configuration.after_initialize do
-		_info = "GEM translations_ennder V#{TranslationsEnnder.version}, translations_ennder/rails.rb, Railx V2.x.y"
+		_info = "GEM translations_ennder V#{TranslationsEnnder.version} Rails V2.x.y"
 
 		puts "Rails.configuration.after_initialize, RAILS_ROOT=[#{RAILS_ROOT}], RAILS_ENV=#{RAILS_ENV}"
 		if RAILS_DEFAULT_LOGGER.nil?
@@ -41,7 +41,7 @@ else
 	#Rails 3
 
 	# Rails n'est pas encore initalisé dans ce cas
-	puts "GEM translations_ennder V#{TranslationsEnnder.version}, translations_ennder/rails.rb, Railx V3.x.y"
+	puts "GEM translations_ennder V#{TranslationsEnnder.version} Rails V3+"
 
 	init_translations_ennder
 end
