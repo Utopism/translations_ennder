@@ -9,7 +9,7 @@ module TranslationsEnnder
   # Returns the version string for the library.
   #
   def self.version
-    @version ||= File.read(path('version.txt')).strip
+    @version ||= Gem::Specification::load("translations_ennder.gemspec")
   end
 
   # Returns the library path for the module. If any arguments are given,
