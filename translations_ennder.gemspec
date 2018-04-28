@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name        = 'translations_ennder'
-  s.version     = '1.1.8'
-  s.date        = '2018-04-28'
+  s.version     = '1.1.9'
+  s.date        = '2018-04-29'
   s.summary     = "Apporte des traductions standard en Français et Anglais -- Brings translations in French and English."
   s.description = "Apporte des traductions Françaises et Anglaises. Permet la traduction automatique des labels pour Rails 2 et Rails 3+"
   s.authors     = ["Ennder"]

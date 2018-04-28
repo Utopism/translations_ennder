@@ -49,23 +49,19 @@ end
 
 module ActionController
 	class Base
-		# Instance methods here
-
 		def set_locale
-			#Il faut une session
-			if session[:session_id].blank?
-				return
-			end
+			# Needs a session
+			return if session[:session_id].blank?
 
 			_param_locale = params[:locale]
-			if (!_param_locale.blank?) and _param_locale.match /^(en|fr)$/
-				#Vient du paramètre de requête
+			if _param_locale.present? && _param_locale.match(/^(en|fr)$/)
+				# Comes from a request parameter
 				I18n.locale = _param_locale
-			elsif session[:locale].blank? and (! request.env['HTTP_ACCEPT_LANGUAGE'].blank?)
-				#Vient des entêtes de la requête
+			elsif session[:locale].blank? && request.env['HTTP_ACCEPT_LANGUAGE'].present?
+				# Comes from the request headers
 				_http_lang_tab = request.env['HTTP_ACCEPT_LANGUAGE'].scan(/^[a-z]{2}/)
-				if (! _http_lang_tab.empty?) and (! _http_lang_tab.first.blank? )
-					if _http_lang_tab.first.match /^(en|fr)$/
+				if _http_lang_tab.present? && _http_lang_tab.first.present?
+					if _http_lang_tab.first.match(/^(en|fr)$/)
 						I18n.locale = _http_lang_tab.first
 					else
 						set_locale_session_or_fr
@@ -86,9 +82,8 @@ module ActionController
 		end
 
 		def set_locale_session_or_fr
-			#Vient de la session, ou pas fourni
+			# Comes from the session or not provided
 			I18n.locale = session[:locale] || :fr
 		end
 	end
 end
-
