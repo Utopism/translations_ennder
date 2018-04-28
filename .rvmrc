@@ -1,2 +1,0 @@
-#Pour que le projet marche aussi avec passenger
-rvm use 1.9.3-p194@translations_ennder --create
