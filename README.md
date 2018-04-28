@@ -1,14 +1,14 @@
 translations_ennder
 ===========
 
-Ce plugin apporte des traductions standard en français et anglais.
-This plugin brings translations in french and english.
+Ce plugin apporte des traductions standard en Français et Anglais.
+This plugin brings translations in French and English.
 
 Features
 --------
 
-Apporte des translations françaises et anglaises
-permet la traduction automatique des labels pour Rails 2 comme avec Rails 3
+Apporte des translations Françaises et Anglaises
+Permet la traduction automatique des labels pour Rails 2 et Rails 3+
 
 Examples
 --------
@@ -39,7 +39,7 @@ License
 
 (The MIT License)
 
-Copyright (c) 2010-2011 [Ennder (mel@ennder.fr)]
+Copyright (c) 2010-2018 [Ennder (mel@ennder.fr)]
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
