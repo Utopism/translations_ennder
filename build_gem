@@ -1,0 +1,7 @@
+echo "-->building gem in pkg/"
+
+gem build translations_ennder.gemspec
+mv translations_ennder*.gem pkg/
+
+echo -e "\nfiles in pkg/ :"
+ls -ailh pkg/
