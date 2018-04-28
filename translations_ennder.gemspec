@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'translations_ennder'
-  s.version     = '1.1.7'
+  s.version     = '1.1.8'
   s.date        = '2018-04-28'
   s.summary     = "Apporte des traductions standard en Français et Anglais -- Brings translations in French and English."
   s.description = "Apporte des traductions Françaises et Anglaises. Permet la traduction automatique des labels pour Rails 2 et Rails 3+"
@@ -20,6 +20,6 @@ Gem::Specification.new do |s|
   s.files += Dir['lib/**/*']
   s.files += Dir['test/**/*']
 
-  s.homepage    = 'https://github.com/ennder/translatios_ennder'
+  s.homepage    = 'https://github.com/ennder/translations_ennder'
   s.license     = 'MIT'
 end
